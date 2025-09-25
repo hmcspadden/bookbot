@@ -16,3 +16,16 @@ def char_count(book_text):
         else:
             chars[lowered] = 1
     return chars
+
+def get_num(tmp):
+    return tmp[0]["num"]
+
+def sort_chars(chars):
+    #tmp_list = []
+    sorted_list = []
+    for c in chars:
+        key = chars[c]
+        sorted_list.append({"char" : c, "num" : key})
+        sorted_list.sort(reverse=True, key=lambda x: x["num"])
+    return sorted_list
+
